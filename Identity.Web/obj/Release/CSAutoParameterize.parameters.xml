@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="aHrzznv5INJ4BiXZESfeW8vlPA/rchFp/XJ69eBL2xlbUuBiqrvwAF8AlcRg9BoXXoc/j+IY95H/9GoZamE7iqJJuqdkbqrDKXvqKkidh5EJU5/HW6Q5s2IZWP/AWl0Alo2/g0aVAo7+GZhKqFA+4CNwiwBflCPy" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Sara\\Source\\Repos\\Identity\\Identity\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
