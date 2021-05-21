@@ -18,15 +18,19 @@ namespace Identity.Web.Helpers
             try
             {
                 TripleDESCryptoServiceProvider des;
-                MD5CryptoServiceProvider hashmd5;
+       
+                SHA256CryptoServiceProvider hashsha2;
 
                 byte[] keyhash, buff;
                 string encrypted;
 
-                hashmd5 = new MD5CryptoServiceProvider();
-                keyhash = hashmd5.ComputeHash(ASCIIEncoding.ASCII.GetBytes("your_site_key"));
+              
+                hashsha2 = new SHA256CryptoServiceProvider();
 
-                hashmd5 = null;
+                keyhash = hashsha2.ComputeHash(ASCIIEncoding.ASCII.GetBytes("your_site_key"));
+
+               
+                hashsha2 = null;
                 des = new TripleDESCryptoServiceProvider();
 
                 des.Key = keyhash;
@@ -52,13 +56,16 @@ namespace Identity.Web.Helpers
             try
             {
                 TripleDESCryptoServiceProvider des;
-                MD5CryptoServiceProvider hashmd5;
+             
+                SHA256CryptoServiceProvider hashsha2;
                 byte[] keyhash, buff;
                 string decrypted;
-                hashmd5 = new MD5CryptoServiceProvider();
-
-                keyhash = hashmd5.ComputeHash(ASCIIEncoding.ASCII.GetBytes("your_site_key"));
-                hashmd5 = null;
+           
+                hashsha2 = new SHA256CryptoServiceProvider();
+         
+                keyhash = hashsha2.ComputeHash(ASCIIEncoding.ASCII.GetBytes("your_site_key"));
+            
+                hashsha2 = null;
                 des = new TripleDESCryptoServiceProvider();
                 des.Key = keyhash;
 
